@@ -1,0 +1,62 @@
+.app {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.player {
+    margin-bottom: 30px;
+}
+
+.soundboard {
+    max-width: 640px;
+    margin: 0 auto;
+}
+  
+.soundboard-keys-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.soundboard-keys-list__item {
+    width: 100px;
+    border: 1px solid black;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+
+.soundboard-keys-list__item:hover {
+    background-color: lightgray;
+}
+
+.soundboard-keys-list__item:nth-child(6n) {
+    margin-right: 0;
+}
+      
+.soundboard-keys-list__item_active {
+    background: black;
+    color: white;
+    transform: scale(0.95);
+}
+
+.soundboard-keys-list__button {
+    display: block;
+    padding: 10px;
+    height: 100%;
+    font-weight: bold;
+}
+
+.soundboard-keys-list__key {
+    display: block;
+    font-size: 30px;
+}
+
+.soundboard-keys-list__label {
+    display: block;
+    color: darkblue;
+}
