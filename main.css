@@ -44,10 +44,19 @@
     transform: scale(0.95);
 }
 
+.soundboard-keys-list__item_looped {
+    background-color: lightyellow;
+    background-image: url('./images/icon-loop.svg');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-y: 90%;
+    background-position-x: 5px;
+}
+
 .soundboard-keys-list__button {
     display: block;
-    padding: 10px;
     height: 100%;
+    padding: 10px;
     font-weight: bold;
 }
 

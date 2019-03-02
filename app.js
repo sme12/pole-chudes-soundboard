@@ -1,5 +1,13 @@
 const playSound = (keyButton) => {
     keyAudioFile.src = keyButton.dataset.src;
+    if (keyAudioFile.loop && !keyButton.dataset.loop) {
+        keyAudioFile.loop = false
+        const loopedButton = document.querySelector('.soundboard-keys-list__item_looped');
+        loopedButton.classList.remove('soundboard-keys-list__item_looped');
+    } else if (!keyAudioFile.loop && keyButton.dataset.loop) {
+        keyAudioFile.loop = true
+        keyButton.parentNode.classList.add('soundboard-keys-list__item_looped')
+    }
     keyAudioFile.currentTime = 0;
     keyAudioFile.play();
 }
