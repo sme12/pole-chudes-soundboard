@@ -1,24 +1,30 @@
-const playSound = (keyButton) => {
+const playSound = (keyButton, audioFile) => {
+    const playing = document.querySelector('.audio-sound[controls]');
     if (keyButton === 'space') {
-        if (keyAudioFile.paused) {
-            keyAudioFile.play();
+        if (playing.paused) {
+            playing.play();
             return;
         } else {
-            keyAudioFile.pause();
+            playing.pause();
             return;
         }
     }
-    keyAudioFile.src = keyButton.dataset.src;
-    if (keyAudioFile.loop && !keyButton.dataset.loop) {
-        keyAudioFile.loop = false
+    if (playing) {
+        playing.pause();
+        playing.controls = false;
+    }
+    const loopedAudio = document.querySelector('.audio-sound[loop]');
+    if (loopedAudio && !keyButton.dataset.loop) {
+        loopedAudio.loop = false
         const loopedButton = document.querySelector('.soundboard-keys-list__item_looped');
         loopedButton.classList.remove('soundboard-keys-list__item_looped');
-    } else if (!keyAudioFile.loop && keyButton.dataset.loop) {
-        keyAudioFile.loop = true
+    } else if (!loopedAudio && keyButton.dataset.loop) {
+        audioFile.loop = true
         keyButton.parentNode.classList.add('soundboard-keys-list__item_looped')
     }
-    keyAudioFile.currentTime = 0;
-    keyAudioFile.play();
+    audioFile.controls = true;
+    audioFile.currentTime = 0;
+    audioFile.play();
 }
   
 const changeButton = (keyButton) => {
@@ -42,19 +48,19 @@ const buttonHandler = (e) => {
     if (!keyButton) {
         return;
     }
+    const audioFile = document.querySelector(`.audio-sound[data-key="${keyNum}"]`);
     changeButton(keyButton);
-    playSound(keyButton);
+    playSound(keyButton, audioFile);
 }
 
 const keysList = document.querySelectorAll('.soundboard-keys-list__button');
-const keyAudioFile = document.querySelector('.audio-sound');
-const audioFilesToPreload = document.querySelectorAll('.audio-sound-preload');
+const audioFiles = document.querySelectorAll('.audio-sound');
 const app = document.querySelector('.app-body');
 const loader = document.querySelector('.loader');
 
 const promisesArr = [];
 
-Array.from(audioFilesToPreload).forEach(audioFile => {
+Array.from(audioFiles).forEach(audioFile => {
     const finished = new Promise((resolve, reject) => {
         audioFile.addEventListener('canplay', resolve);
         audioFile.addEventListener('error', reject);
