@@ -11,199 +11,280 @@
         <header class="header">
             <h1 class="header__title">Pole Chudes Soundboard</h1>
         </header>
-        <section class="player">
-            <audio
-                class="audio-sound"
-                controls
-            ></audio>
-        </section>
-        <section class="soundboard">
-            <ul class="soundboard__keys soundboard-keys-list">
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="81"
-                        data-src="./sounds/players-enter.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">Q</span>
-                        <span class="soundboard-keys-list__label">
-                            Players Enter
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="87"
-                        data-src="./sounds/winner-fanfary.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">W</span>
-                        <span class="soundboard-keys-list__label">
-                            Winner fanfary
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="69"
-                        data-src="./sounds/otbivka.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">E</span>
-                        <span class="soundboard-keys-list__label">
-                            Otbivka
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="82"
-                        data-src="./sounds/sector_priz.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">R</span>
-                        <span class="soundboard-keys-list__label">
-                            Sector Priz
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="84"
-                        data-src="./sounds/sector_plus.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">T</span>
-                        <span class="soundboard-keys-list__label">
-                            Sector Plus
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="89"
-                        data-src="./sounds/sector_zero.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">Y</span>
-                        <span class="soundboard-keys-list__label">
-                            Sector Zero
-                        </span>
-                    </a>
-                </li>
+        <div class="loader">
+            Sound files are loading...
+        </div>
+        <main class="app-body">
+            <section class="player">
+                <audio
+                    class="audio-sound"
+                    controls
+                ></audio>
 
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="65"
-                        data-src="./sounds/baraban.mp3"
-                        data-loop="loop"
-                    >
-                        <span class="soundboard-keys-list__key">A</span>
-                        <span class="soundboard-keys-list__label">
-                            Baraban
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="83"
-                        data-src="./sounds/letter_correct.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">S</span>
-                        <span class="soundboard-keys-list__label">
-                            Letter correct
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="68"
-                        data-src="./sounds/letter_wrong.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">D</span>
-                        <span class="soundboard-keys-list__label">
-                            Letter wrong
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="70"
-                        data-src="./sounds/word_correct.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">F</span>
-                        <span class="soundboard-keys-list__label">
-                            Word Correct
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="71"
-                        data-src="./sounds/priz-v-studiyu.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">G</span>
-                        <span class="soundboard-keys-list__label">
-                            Priz v studiyu
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="72"
-                        data-src="./sounds/aaaaaavtomobil.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">H</span>
-                        <span class="soundboard-keys-list__label">
-                            Aaaavto-mobil!
-                        </span>
-                    </a>
-                </li>
-
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="90"
-                        data-src="./sounds/opening.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">Z</span>
-                        <span class="soundboard-keys-list__label">
-                            Opening Theme
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="88"
-                        data-src="./sounds/super-igra-60-seconds.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">X</span>
-                        <span class="soundboard-keys-list__label">
-                            Super Igra Thinking
-                        </span>
-                    </a>
-                </li>
-                <li class="soundboard-keys-list__item">
-                    <a 
-                        class="soundboard-keys-list__button"
-                        data-key="67"
-                        data-src="./sounds/super-igra-wrong.mp3"
-                    >
-                        <span class="soundboard-keys-list__key">C</span>
-                        <span class="soundboard-keys-list__label">
-                            Super Igra Wrong
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </section>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/baraban.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/opening.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/aaaaaavtomobil.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/letter_correct.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/letter_wrong.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/otbivka.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/players-enter.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/priz-v-studiyu.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/sector_plus.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/sector_priz.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/sector_zero.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/super-igra-60-seconds.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/super-igra-wrong.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/winner-fanfary.mp3"
+                ></audio>
+                <audio
+                    class="audio-sound-preload"
+                    preload="auto"
+                    src="./sounds/word_correct.mp3"
+                ></audio>
+            </section>
+            <section class="soundboard">
+                <ul class="soundboard__keys soundboard-keys-list">
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="81"
+                            data-src="./sounds/players-enter.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">Q</span>
+                            <span class="soundboard-keys-list__label">
+                                Players Enter
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="87"
+                            data-src="./sounds/winner-fanfary.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">W</span>
+                            <span class="soundboard-keys-list__label">
+                                Winner fanfary
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="69"
+                            data-src="./sounds/otbivka.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">E</span>
+                            <span class="soundboard-keys-list__label">
+                                Otbivka
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="82"
+                            data-src="./sounds/sector_priz.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">R</span>
+                            <span class="soundboard-keys-list__label">
+                                Sector Priz
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="84"
+                            data-src="./sounds/sector_plus.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">T</span>
+                            <span class="soundboard-keys-list__label">
+                                Sector Plus
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="89"
+                            data-src="./sounds/sector_zero.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">Y</span>
+                            <span class="soundboard-keys-list__label">
+                                Sector Zero
+                            </span>
+                        </a>
+                    </li>
+    
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="65"
+                            data-src="./sounds/baraban.mp3"
+                            data-loop="loop"
+                        >
+                            <span class="soundboard-keys-list__key">A</span>
+                            <span class="soundboard-keys-list__label">
+                                Baraban
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="83"
+                            data-src="./sounds/letter_correct.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">S</span>
+                            <span class="soundboard-keys-list__label">
+                                Letter correct
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="68"
+                            data-src="./sounds/letter_wrong.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">D</span>
+                            <span class="soundboard-keys-list__label">
+                                Letter wrong
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="70"
+                            data-src="./sounds/word_correct.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">F</span>
+                            <span class="soundboard-keys-list__label">
+                                Word Correct
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="71"
+                            data-src="./sounds/priz-v-studiyu.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">G</span>
+                            <span class="soundboard-keys-list__label">
+                                Priz v studiyu
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="72"
+                            data-src="./sounds/aaaaaavtomobil.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">H</span>
+                            <span class="soundboard-keys-list__label">
+                                Aaaavto-mobil!
+                            </span>
+                        </a>
+                    </li>
+    
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="90"
+                            data-src="./sounds/opening.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">Z</span>
+                            <span class="soundboard-keys-list__label">
+                                Opening Theme
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="88"
+                            data-src="./sounds/super-igra-60-seconds.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">X</span>
+                            <span class="soundboard-keys-list__label">
+                                Super Igra Thinking
+                            </span>
+                        </a>
+                    </li>
+                    <li class="soundboard-keys-list__item">
+                        <a 
+                            class="soundboard-keys-list__button"
+                            data-key="67"
+                            data-src="./sounds/super-igra-wrong.mp3"
+                        >
+                            <span class="soundboard-keys-list__key">C</span>
+                            <span class="soundboard-keys-list__label">
+                                Super Igra Wrong
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
         <script src="./app.js" async defer></script>
     </body>
 </html> 

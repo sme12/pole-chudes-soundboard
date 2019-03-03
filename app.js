@@ -1,4 +1,13 @@
 const playSound = (keyButton) => {
+    if (keyButton === 'space') {
+        if (keyAudioFile.paused) {
+            keyAudioFile.play();
+            return;
+        } else {
+            keyAudioFile.pause();
+            return;
+        }
+    }
     keyAudioFile.src = keyButton.dataset.src;
     if (keyAudioFile.loop && !keyButton.dataset.loop) {
         keyAudioFile.loop = false
@@ -22,7 +31,14 @@ const removeTransition = (e) => {
 
 const buttonHandler = (e) => {
     let keyNum = e.keyCode || e.target.dataset.key || e.target.parentNode.dataset.key;
-    const keyButton = document.querySelector(`.soundboard-keys-list__button[data-key="${keyNum}"]`);
+    let keyButton = null;
+    if (keyNum === 32) {
+        keyButton = 'space';
+        playSound(keyButton);
+        return;
+    } else {
+        keyButton = document.querySelector(`.soundboard-keys-list__button[data-key="${keyNum}"]`);
+    }
     if (!keyButton) {
         return;
     }
@@ -32,6 +48,24 @@ const buttonHandler = (e) => {
 
 const keysList = document.querySelectorAll('.soundboard-keys-list__button');
 const keyAudioFile = document.querySelector('.audio-sound');
+const audioFilesToPreload = document.querySelectorAll('.audio-sound-preload');
+const app = document.querySelector('.app-body');
+const loader = document.querySelector('.loader');
+
+const promisesArr = [];
+
+Array.from(audioFilesToPreload).forEach(audioFile => {
+    const finished = new Promise((resolve, reject) => {
+        audioFile.addEventListener('canplay', resolve);
+        audioFile.addEventListener('error', reject);
+    });
+    promisesArr.push(finished);
+});
+
+Promise.all(promisesArr).then(() => {
+    app.classList.add('is-shown');
+    loader.classList.add('is-hidden');
+});
 
 keysList.forEach(key => {
     key.addEventListener("click", (e) => {

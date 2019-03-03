@@ -1,6 +1,18 @@
+.is-shown {
+    display: block !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
 .app {
     box-sizing: border-box;
     text-align: center;
+}
+
+.app-body {
+    display: none;
 }
 
 .player {
